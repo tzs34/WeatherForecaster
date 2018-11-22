@@ -1,4 +1,4 @@
-import styled, { keyframes, injectGlobal } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 const FlexRow = styled.div`
   display: flex;
