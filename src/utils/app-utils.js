@@ -16,7 +16,9 @@ const getCountryCurrency = (balance, code) => {
   }
 
   let sign = codes[code]
-  return `${sign}${balance}`
+  let amount = addTwoDPZero(balance)
+  
+  return `${sign}${amount}`
 
 }
 

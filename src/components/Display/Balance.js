@@ -2,7 +2,7 @@ import propTypes from 'prop-types'
 
 let {string} = propTypes
 
-const Balance =  ({name, amount}) => {
+const Balance =  ({name, amount, sign}) => {
   return (
     <svg version="1.1" id="elp-badge" className="badge"
     xmlns="http://www.w3.org/2000/svg"

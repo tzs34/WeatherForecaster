@@ -40,7 +40,7 @@ class HeaderComp extends Component {
 
         return(
           <Header>
-            <BalanceDisplay name={name} amount={this.amount} />
+            <BalanceDisplay name={name} amount={this.amount} sign/>
           </Header>
        )
       }}
