@@ -10,4 +10,15 @@ const addTwoDPZero = number => {
   return value
 }
 
-module.exports = {capitalize, addTwoDPZero}
+const getCountryCurrency = (balance, code) => {
+  let codes ={
+    'GB': '£'
+  }
+
+  let sign = codes[code]
+ let s = `${sign}${balance}`
+ console.log(s)
+ return s
+}
+
+module.exports = {capitalize, addTwoDPZero, getCountryCurrency}

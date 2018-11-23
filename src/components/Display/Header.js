@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import AppContext from 'context/AppContext'
 import BalanceDisplay from './Balance'
 import { FlexRow } from 'utils/styles'
+import {getCountryCurrency} from 'utils/app-utils'
 import propTypes from 'prop-types'
 
 let {bool} = propTypes
@@ -24,14 +25,21 @@ const Header = styled(FlexRow)`
 
 class HeaderComp extends Component {
 
+  amount = 0
+
   render(){
     return (
            <AppContext.Consumer>
-           {({ authenticated}) => {
+           {({user}) => {
+            let {name, balance, isoCountryCode} = user
+
+            if(balance !== this.amount){
+             this.amount = getCountryCurrency(balance, isoCountryCode)
+            }
 
              return(
                <Header>
-                 <BalanceDisplay name='Jonny' amount='50.80' currencySign='£' />
+                 <BalanceDisplay name={name} amount={this.amount} />
                </Header>
             )
            }}

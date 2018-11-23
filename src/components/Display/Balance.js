@@ -2,7 +2,7 @@ import propTypes from 'prop-types'
 
 let {string} = propTypes
 
-const Balance =  ({name, amount, currencySign}) => {
+const Balance =  ({name, amount}) => {
   return (
     <svg version="1.1" id="elp-badge" className="badge"
     xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const Balance =  ({name, amount, currencySign}) => {
         <tspan className="badge-header" fill="#FFFFFF" fontFamily="'Open Sans'" fontSize="40">{`Hello ${name}`}</tspan>
       </textPath>
     </text>
-    <text className="badge-balance" transform="matrix(0.9862 0.1656 -0.1656 0.9862 135 150)" fill="#FFFFFF" fontFamily="'Open Sans'" fontWeight="bold" fontSize="60" textAnchor="middle">{`${currencySign} ${amount}`}</text>
+    <text className="badge-balance" transform="matrix(0.9862 0.1656 -0.1656 0.9862 135 150)" fill="#FFFFFF" fontFamily="'Open Sans'" fontWeight="bold" fontSize="60" textAnchor="middle">{`${amount}`}</text>
     <text transform="matrix(0.9862 0.1656 -0.1656 0.9862 245.5249 190)" fill="#FFFFFF" fontFamily="'Open Sans'" fontWeight="400" fontSize="32" textAnchor="middle"></text>
     <path id="SVGID_x5F_1_x5F_" fill="none" d="M263.9,172.8c11-65.5-33.2-127.6-98.7-138.6S37.5,67.4,26.5,133s33.2,127.6,98.7,138.6
                                                C190.8,282.6,252.9,238.4,263.9,172.8z"/>
