@@ -2,7 +2,7 @@
   "data": {
     "user":{
       "name": "Freddy",
-      "balance": "22.10",
+      "balance": 22.10,
       "isoCountryCode": "GB"
     },
     "pets":[
