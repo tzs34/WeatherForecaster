@@ -39,16 +39,20 @@ class App extends Component{
     .then(({status, data}) => {
       if(status === OK){
         let {user, pets} = data
-        let authenticated = Boolean(user.name) 
+        let authenticated = Boolean(user.name)
         this.setState({
           user,
           authenticated,
           pets
         })
+      }else{
+        //log error
+        //send warning to user to contact support
       }
     })
     .catch((e) => {
         // log error
+        // send waring to user to contact support
     })
 
   }
