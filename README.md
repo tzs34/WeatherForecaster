@@ -6,7 +6,9 @@
 
 ##To run the application.
 
-1. Clone the repository (by mistake I ommitted node-modules from my .gitignore file, so the required dependencies are already present)
-2. I had issues getting my webpack to use a .env file which is how I normally handle API keys etc. I normally use the DefinePlugin plugin in the normal way.  Because this option seemed unavailable I used a file creds.js ( not pushed to the repository as it is listed in the .gitignore file). So please make a new file in the root of your directory and add   LOCAL_URL:"http://localhost:3001/" .
-4. Run yarn dev 
-5. The application should open in a browser window http://localhost:8080/
+1. Clone the repository.
+2. Then cd into the root of the cloned repository.
+3. Run yarn install to add the required dependencies.
+4. I had issues getting my webpack to use a .env file which is how I normally handle API keys etc. I normally use the DefinePlugin plugin in the normal way.  Because this option seemed unavailable I used a file creds.js ( not pushed to the repository as it is listed in the .gitignore file). So please make a new file in the root of your directory and add   LOCAL_URL:"http://localhost:3001/" .
+5. Run yarn dev 
+6. The application should open in a browser window http://localhost:8080/
