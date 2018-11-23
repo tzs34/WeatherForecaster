@@ -6,5 +6,8 @@ export default {
   nodata: 1 << 4, // 16
   hasdata: 1 << 6, // 64
   error: 1 << 8, // 256
+},
+  htmlCodes:{
+    OK: 200
   }
 }

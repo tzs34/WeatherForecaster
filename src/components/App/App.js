@@ -5,7 +5,7 @@ import styled, { injectGlobal, ThemeProvider } from 'styled-components'
 import Copy from 'utils/copy'
 import { FlexRow} from 'utils/styles'
 import AppContext from 'context/AppContext'
-import {getPets} from '../../services/service'
+import {getData} from '../../services/service'
 
 injectGlobal`
 
@@ -26,16 +26,26 @@ const Container = styled.div`
 class App extends Component{
 
   state = {
-    authenticated: true,
-    data: [],
-    pet: null
+    authenticated: false,
+    pets: [],
+    selectedPet:null,
+    user: {}
   }
 
   componentDidMount(){
+    let {htmlCodes:{OK}} = Copy
 
-    let pets = getPets()
-    .then(({data}) => {
-      this.setState({data})
+    getData()
+    .then(({status, data}) => {
+      if(status === OK){
+        let {user, pets} = data
+        let authenticated = Boolean(user.name) 
+        this.setState({
+          user,
+          authenticated,
+          pets
+        })
+      }
     })
     .catch((e) => {
         // log error
@@ -46,19 +56,19 @@ class App extends Component{
   choosePet = ({target:{id}}) => {
 
     if(id !== this.state.pet){
-      this.setState({pet: id})
+      this.setState({selectedPet: id})
     }
 
   }
 
   render(){
 
-    let { authenticated, pet, data} = this.state
+    let { authenticated, selectedPet, pets, user} = this.state
     let {choosePet} = this
-    let petData = pet ? data.filter( animal => animal.id === pet)[0]: null
+    let petData = pets.length > 0 ? pets.filter( pet => pet.id === selectedPet)[0] : null
 
     return(
-       <AppContext.Provider value={{authenticated, choosePet, petData}}>
+       <AppContext.Provider value={{authenticated, choosePet, petData, user}}>
          <Container>
            <AppView authenticated={authenticated}/>
          </Container>

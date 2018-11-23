@@ -6,7 +6,7 @@ let localUrl = process.env.NODE_ENV  === 'production' ? 'to-be-decided' : LOCAL_
 
 const API_MAP = {
 
-    getPets: `${localUrl}\pets`
+    getData: `${localUrl}data`
 
 }
 
