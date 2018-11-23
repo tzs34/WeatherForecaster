@@ -28,23 +28,24 @@ class HeaderComp extends Component {
   amount = 0
 
   render(){
+
     return (
-           <AppContext.Consumer>
-           {({user}) => {
-            let {name, balance, isoCountryCode} = user
+      <AppContext.Consumer>
+      {({user}) => {
+       let {name, balance, isoCountryCode} = user
 
-            if(balance !== this.amount){
-             this.amount = getCountryCurrency(balance, isoCountryCode)
-            }
+       if(balance !== this.amount){
+        this.amount = getCountryCurrency(balance, isoCountryCode)
+       }
 
-             return(
-               <Header>
-                 <BalanceDisplay name={name} amount={this.amount} />
-               </Header>
-            )
-           }}
-           </AppContext.Consumer>
-        )
+        return(
+          <Header>
+            <BalanceDisplay name={name} amount={this.amount} />
+          </Header>
+       )
+      }}
+      </AppContext.Consumer>
+   )
   }
 }
 

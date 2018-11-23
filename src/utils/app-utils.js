@@ -16,9 +16,8 @@ const getCountryCurrency = (balance, code) => {
   }
 
   let sign = codes[code]
- let s = `${sign}${balance}`
- console.log(s)
- return s
+  return `${sign}${balance}`
+
 }
 
 module.exports = {capitalize, addTwoDPZero, getCountryCurrency}
