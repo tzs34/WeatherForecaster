@@ -37,4 +37,5 @@ const FadeOut = styled.div`
 export {
   FlexRow,
   FadeIn,
+  FadeOut
 }

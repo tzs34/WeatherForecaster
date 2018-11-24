@@ -39,7 +39,7 @@ const Label = styled.span`
   display: block;
 `
 
-const InformationLabel = (props) =>(
+const InformationLabel = () =>(
   <Container>
     <Header />
     <div>

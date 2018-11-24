@@ -1,7 +1,4 @@
-import {Component} from 'react'
 import styled from 'styled-components'
-import SVG from 'react-inlinesvg'
-import {FlexRow} from 'utils/styles'
 import PetListItems from './PetListItems'
 import propTypes from 'prop-types'
 
@@ -27,7 +24,8 @@ const SimpleList = (props) =>{
 }
 
 SimpleList.propTypes ={
-  information: object
+  information: object,
+  item: object
 }
 
 export default SimpleList

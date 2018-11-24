@@ -6,11 +6,12 @@ import {capitalize, addTwoDPZero} from 'utils/app-utils'
 import FadeInHOC from '../Hoc/FadeInHOC'
 import propTypes from 'prop-types'
 
-let { array, string } = propTypes
+let { array, object, string} = propTypes
 
 const Container = styled(FlexRow)`
   flex-direction: column;
 `
+
 const Item = styled(FlexRow)`
   flex-direction: column;
   justify-content: space-evenly;
@@ -20,6 +21,7 @@ const Item = styled(FlexRow)`
   margin: 1em 0.2em;
   min-width: 300px;
 `
+
 const Label = styled.div`
   padding: 0.5em;
   text-align: center;
@@ -66,12 +68,12 @@ class PetListItems extends Component {
       <Container>
         <div>
         {
-          stuff.map((item, index) => (<PetListItems.ListItemRenderer item={item} index={index} />))
+          stuff.map((item, index) => (<PetListItems.ListItemRenderer item={item} index={index} key={index}/>))
         }
         </div>
         <div>
         {
-          treats.map((item, index) => (<PetListItems.ListItemRenderer item={item} index={index} />))
+          treats.map((item, index) => (<PetListItems.ListItemRenderer item={item} index={index} key={index}/>))
         }
         </div>
         <div>
@@ -88,6 +90,8 @@ class PetListItems extends Component {
 PetListItems.propTypes ={
   stuff: array,
   treats: array,
-  tip: string
+  tip: string,
+  information: object
 }
+
 export default PetListItems

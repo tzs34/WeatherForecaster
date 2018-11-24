@@ -6,7 +6,7 @@ import SimpleList from '../List/SimpleList'
 import { FlexRow } from 'utils/styles'
 import propTypes from 'prop-types'
 
-let {array, bool, func} = propTypes
+let {array, func} = propTypes
 
 const Container = styled(FlexRow)`
   flex-direction: column;
@@ -19,7 +19,7 @@ class PetView extends Component {
   render(){
     return (
            <AppContext.Consumer>
-           {({ authenticated, choosePet, petData=null}) => {
+           {({choosePet, petData=null}) => {
 
              return(
                <Container>
@@ -39,7 +39,6 @@ class PetView extends Component {
 
 PetView.propTypes = {
   petData: array,
-  authenticated: bool,
   choosePet: func
 }
 

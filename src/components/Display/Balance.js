@@ -2,7 +2,7 @@ import propTypes from 'prop-types'
 
 let {string} = propTypes
 
-const Balance =  ({name, amount, sign}) => {
+const Balance =  ({name, amount}) => {
   return (
     <svg version="1.1" id="elp-badge" className="badge"
     xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,6 @@ const Balance =  ({name, amount, sign}) => {
           <feMergeNode in="SourceGraphic"/>
         </feMerge>
       </filter>
-      <style type="text/css">@import url('https://fonts.googleapis.com/css?family=Fredoka+One');</style>
     </defs>
     <circle className="circle" fill="#28BDEE" cx="144.5" cy="144.5" r="144.5"/>
     <path id="SVGID_x5F_2_x5F_" fill="none" d="M31.1,129c10.4-62.1,69.2-104,131.4-93.6s104,69.2,93.6,131.4
@@ -46,8 +45,7 @@ const Balance =  ({name, amount, sign}) => {
 
 Balance.propTypes = {
  name: string.isRequired,
- amount: string.isRequired,
- currencySign: string.isRequired
+ amount: string.isRequired
 }
 
 export default Balance

@@ -1,4 +1,3 @@
-import {Component} from 'react'
 import styled from 'styled-components'
 import { FlexRow } from 'utils/styles'
 import SVG from 'react-inlinesvg'

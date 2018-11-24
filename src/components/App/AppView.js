@@ -1,8 +1,5 @@
 import {Component} from 'react'
 import styled from 'styled-components'
-import { FlexRow } from 'utils/styles'
-import Header from '../Display/Header'
-import ButtonBar from '../Display/ButtonBar'
 import BalanceAndLabel from '../Display/HeaderLabel'
 import PetView from '../Display/PetView'
 import LoadingHOC from '../Hoc/LoadingIndicatorHOC'

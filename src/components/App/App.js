@@ -1,9 +1,7 @@
-import {Component, createContext} from 'react'
-import PropTypes from "prop-types"
+import {Component} from 'react'
 import AppView from './AppView'
-import styled, { injectGlobal, ThemeProvider } from 'styled-components'
+import styled, {injectGlobal} from 'styled-components'
 import Copy from 'utils/copy'
-import { FlexRow} from 'utils/styles'
 import AppContext from 'context/AppContext'
 import {getData} from '../../services/service'
 
@@ -51,6 +49,7 @@ class App extends Component{
       }
     })
     .catch((e) => {
+      console.log(e)
         // log error
         // send waring to user to contact support
     })

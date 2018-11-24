@@ -1,6 +1,6 @@
 import SVG from 'react-inlinesvg'
 
-const Loader = (props) => (
+const Loader = () => (
   <SVG src="/src/assets/svgs/loader.svg" />
 )
 

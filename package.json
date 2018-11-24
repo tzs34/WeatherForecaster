@@ -5,15 +5,20 @@
   "author": "Dave Thorneycroft",
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>__tests__/setup/setupEnzyme.js",
-    "testPathIgnorePatterns": ["<rootDir>/__tests__/setup/"],
-     "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/setup/"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "dev": "webpack-dev-server --open --mode development | json-server --watch db.json --port 3001",
     "build": "webpack --mode production",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "lint": "eslint src"
   },
   "dependencies": {
     "@babel/core": "^7.1.6",
@@ -22,6 +27,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "axios": "^0.18.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-react-require": "^3.0.1",
     "babel-plugin-styled-components": "^1.8.0",
@@ -29,6 +35,7 @@
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "dotenv": "^6.1.0",
+    "eslint-plugin-react": "^7.11.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "install": "^0.12.2",
