@@ -1,7 +1,5 @@
-import SVG from 'react-inlinesvg'
+import SVG from "react-inlinesvg";
 
-const Loader = () => (
-  <SVG src="/src/assets/svgs/loader.svg" />
-)
+const Loader = () => <SVG src="/src/assets/svgs/loader.svg" />;
 
-export default Loader
+export default Loader;

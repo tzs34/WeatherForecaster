@@ -1,5 +1,5 @@
 export default {
-  htmlCodes:{
+  htmlCodes: {
     OK: 200
   }
-}
+};
