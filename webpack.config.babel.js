@@ -1,11 +1,11 @@
-import path from 'path'
-import HtmlWebPackPlugin from 'html-webpack-plugin'
+import path from "path";
+import HtmlWebPackPlugin from "html-webpack-plugin";
 
 const HTMLWebpackPluginConfig = new HtmlWebPackPlugin({
-    template: path.join(__dirname,'/src/index.html'),
-    filename: 'index.html',
-    inject: 'body'
-})
+  template: path.join(__dirname, "/src/index.html"),
+  filename: "index.html",
+  inject: "body"
+});
 
 module.exports = {
   module: {
@@ -27,18 +27,18 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader'
+        loader: "svg-inline-loader"
       }
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ["*", ".js", ".jsx"],
     alias: {
-        utils: path.resolve(__dirname, './src/utils/'),
-        context: path.resolve(__dirname, './src/context/')
+      utils: path.resolve(__dirname, "./src/utils/"),
+      context: path.resolve(__dirname, "./src/context/")
     }
   },
-  plugins: [ HTMLWebpackPluginConfig],
+  plugins: [HTMLWebpackPluginConfig],
   watch: true,
-  devtool: 'cheap-module-inline-source-map'
-}
+  devtool: "cheap-module-inline-source-map"
+};

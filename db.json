@@ -1,41 +1,89 @@
 {
   "data": {
-    "user":{
+    "user": {
       "name": "Freddy",
-      "balance": 22.10,
+      "balance": 22.1,
       "isoCountryCode": "GB"
     },
-    "pets":[
+    "pets": [
       {
         "id": "fish",
-        "information":{
-          "stuff": [{"name":"tank", "url":"/src/assets/svgs/tank.svg" , "cost": "4.00"}],
-          "treats":[{"name":"food", "url":"/src/assets/svgs/fishfood.svg", "cost": "1.00" }],
-          "tip":{ "tip":"Fish like a nice clean tank"}
+        "information": {
+          "stuff": [
+            {
+              "name": "tank",
+              "url": "/src/assets/svgs/tank.svg",
+              "cost": "4.00"
+            }
+          ],
+          "treats": [
+            {
+              "name": "food",
+              "url": "/src/assets/svgs/fishfood.svg",
+              "cost": "1.00"
+            }
+          ],
+          "tip": { "tip": "Fish like a nice clean tank" }
         }
       },
       {
         "id": "rabbit",
-        "information":{
-          "stuff": [{"name":"hutch", "url":"/src/assets/svgs/hutch.svg" , "cost": "8.00"}],
-          "treats":[{"name":"food", "url":"/src/assets/svgs/food.svg", "cost": "2.00" }],
-          "tip":{"tip": "Rabbits like carrots"}
+        "information": {
+          "stuff": [
+            {
+              "name": "hutch",
+              "url": "/src/assets/svgs/hutch.svg",
+              "cost": "8.00"
+            }
+          ],
+          "treats": [
+            {
+              "name": "food",
+              "url": "/src/assets/svgs/food.svg",
+              "cost": "2.00"
+            }
+          ],
+          "tip": { "tip": "Rabbits like carrots" }
         }
       },
       {
         "id": "cat",
         "information": {
-          "stuff": [{"name":"basket", "url":"/src/assets/svgs/basket.svg" , "cost": "9.00"}],
-          "treats":[{"name":"toy", "url":"/src/assets/svgs/cattoy.svg", "cost": "4.00" }],
-          "tip":{"tip":"Cats enjoy being stroked"}
+          "stuff": [
+            {
+              "name": "basket",
+              "url": "/src/assets/svgs/basket.svg",
+              "cost": "9.00"
+            }
+          ],
+          "treats": [
+            {
+              "name": "toy",
+              "url": "/src/assets/svgs/cattoy.svg",
+              "cost": "4.00"
+            }
+          ],
+          "tip": { "tip": "Cats enjoy being stroked" }
         }
       },
       {
         "id": "dog",
         "information": {
-          "stuff": [{"name":"kennel", "url":"/src/assets/svgs/kenel.svg" , "cost": "10.00"}],
-          "treats":[{"name":"bone", "url":"/src/assets/svgs/dogbone.svg", "cost": "6.00" }],
-          "tip":{"tip": "Dogs enjoy long walks"}
+          "stuff": [
+            {
+              "name": "kennel",
+              "url": "/src/assets/svgs/kenel.svg",
+              "cost": "10.00"
+            }
+          ],
+          "treats": [
+            {
+              "name": "bone",
+              "url": "/src/assets/svgs/dogbone.svg",
+              "cost": "6.00"
+            }
+          ],
+          "tip": { "tip": "Dogs enjoy long walks" }
         }
       }
     ]

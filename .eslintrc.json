@@ -5,20 +5,17 @@
     "allowImportExportEverywhere": false,
     "codeFrame": true
   },
-   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
-   "rules":{
-     "valid-typeof": "error",
-     "react/react-in-jsx-scope": "off",
-     "HTML entities must be escaped": "off",
-     "Component definition is missing display name": "off",
-     "no-console": "off"
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "valid-typeof": "error",
+    "react/react-in-jsx-scope": "off",
+    "HTML entities must be escaped": "off",
+    "Component definition is missing display name": "off",
+    "no-console": "off"
   },
-   "env":{
-     "browser": true,
-     "node": true,
-     "jest": true
-   }
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
 }
