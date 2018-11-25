@@ -5,13 +5,18 @@
     "allowImportExportEverywhere": false,
     "codeFrame": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "eslint-config-prettier"
+  ],
   "rules": {
     "valid-typeof": "error",
     "react/react-in-jsx-scope": "off",
     "HTML entities must be escaped": "off",
     "Component definition is missing display name": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-unused-vars": ["error", { "args": "none" }]
   },
   "env": {
     "browser": true,
