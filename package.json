@@ -3,15 +3,6 @@
   "description": "A demo application for RoosterMoney",
   "version": "0.0.1",
   "author": "Dave Thorneycroft",
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>__tests__/setup/setupEnzyme.js",
-    "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/setup/"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
-  },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "dev": "webpack-dev-server --open --mode development | json-server --watch db.json --port 3001",
@@ -20,6 +11,17 @@
     "test:watch": "jest --watch",
     "lint": "eslint src"
   },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ]
+  },
   "dependencies": {
     "@babel/core": "^7.1.6",
     "@babel/plugin-proposal-decorators": "^7.1.6",
@@ -27,7 +29,9 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "axios": "^0.18.0",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-react-require": "^3.0.1",
     "babel-plugin-styled-components": "^1.8.0",
@@ -40,8 +44,10 @@
     "eslint-plugin-react": "^7.11.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.2.0",
     "install": "^0.12.2",
     "json-server": "^0.14.0",
+    "lint-staged": "^8.1.0",
     "prettier": "^1.15.2",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
