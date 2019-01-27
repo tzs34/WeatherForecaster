@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { FlexRow, FadeIn } from "../utils/styles";
+import propTypes from "prop-types";
+
+let { element, string, number } = propTypes;
 
 const Container = FlexRow.extend`
   display: flex;
@@ -40,5 +43,12 @@ const WeatherCard = ({ city, temp, day, icon }) => (
     </Container>
   </FadeIn>
 );
+
+WeatherCard.propTypes = {
+  city: string,
+  temp: number,
+  day: string,
+  icon: element
+};
 
 export default WeatherCard;

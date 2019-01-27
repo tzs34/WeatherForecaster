@@ -1,5 +1,6 @@
 import Loader from "react-loader";
 import styled, { injectGlobal } from "styled-components";
+import propTypes from "prop-types";
 import Titles from "./Titles";
 import Form from "./Form";
 import Weather from "./Weather";
@@ -7,6 +8,8 @@ import { GeoLocationHOC } from "./hoc";
 import { getGeoLocatedWeather, getCityWeather } from "../services/services";
 import { getWeatherData, formatWeatherData } from "../utils/app-utils";
 import Copy from "../utils/copy";
+
+let { object } = propTypes;
 
 let {
   messages: { loadingMsg }
@@ -39,6 +42,8 @@ class App extends React.Component {
     days: [],
     city: ""
   };
+
+  static propTypes = { geoLocation: object };
 
   componentDidUpdate(prevProps) {
     let { geoLocation } = this.props;

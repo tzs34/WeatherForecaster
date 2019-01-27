@@ -4,6 +4,9 @@ import WeatherIcon from "react-icons-weather";
 import { formatCelsiusTemp } from "../utils/app-utils";
 import { FlexRow } from "../utils/styles";
 import WeatherCard from "./weather-card";
+import propTypes from "prop-types";
+
+let { array, string } = propTypes;
 
 const Title = styled.span`
   display: block;
@@ -36,7 +39,6 @@ const Weather = ({ days, city }) => (
     </div>
     <HList>
       {days.map(({ temp, day, icon }, index) => {
-        console.log(icon);
         let color = icon < 800 ? "#668B8B" : "#70DBDB";
         let iconComp = (
           <IconContainer color={color}>
@@ -55,5 +57,10 @@ const Weather = ({ days, city }) => (
     </HList>
   </Container>
 );
+
+Weather.propTypes = {
+  days: array,
+  city: string
+};
 
 export default Weather;

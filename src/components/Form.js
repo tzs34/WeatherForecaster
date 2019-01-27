@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import propTypes from "prop-types";
 
+let { func } = propTypes;
 const FormContainer = styled.div`
   background-color: white;
   width: 550px;
@@ -61,4 +63,7 @@ const UserForm = ({ getWeather }) => (
   </FormContainer>
 );
 
+FormContainer.propTypes = {
+  getWeather: func
+};
 export default UserForm;
