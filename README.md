@@ -14,4 +14,4 @@
 4. Run yarn start
 5. You may be prompted to allow access to your location, if you can please allow this.
 6. The application should open in a browser window http://localhost:8080/
-   > > > > > > > 98151e7040ed6ae197a4c603d232e0173ace133f
+ 
