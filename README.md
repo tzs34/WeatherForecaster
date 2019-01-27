@@ -1,14 +1,15 @@
-# PetCalculator
+# WeatherForecaster
 
-## A basic React application which acts as a calculator to find out how much a pet would cost to own. It is aimed at younger children age range 6 - 8 years.
-### I chose a suitable font, with simple, generous letter shapes and clear typeface for easier reading. The styling is also aimed to appeal to the target age range.
-#### The application uses React v16, styled components and the React context API. I use json-server to allow me to fake API calls for some of the data.
+## A basic React application which uses the OpenWeather API to obtain a local weather forcaset for the user.
+#### The application uses React v16 and styled components.
+##### On starting the application , the application attempts to get the Geolocation API to ascertain the latitude / longtitude coordinates of the user. If these coordnates are available then a call to the  OpenWeather API is made to provide the local weather forcase for the next 5 days. The application displays the day, temperature and an icon indicating the wetaher conditions to the user. If the location of the user cannot be obtained using the Geolocation API the application renders a form to get the local weather forecast using the ity name and country code. Note this is unfinished.
+
 
 ##To run the application.
 
 1. Clone the repository.
 2. Then cd into the root of the cloned repository.
 3. Run yarn install to add the required dependencies.
-4. I had issues getting my webpack to use a .env file which is how I normally handle API keys etc. I normally use the DefinePlugin plugin in the normal way.  Because this option seemed unavailable I used a file creds.js ( not pushed to the repository as it is listed in the .gitignore file). So please make a new file in the root of your directory called 'creds.js' and add   LOCAL_URL:"http://localhost:3001/" .
-5. Run yarn dev 
+4. Run yarn start
+5. You may be prompted to allow access to your location, if you can please allow this.
 6. The application should open in a browser window http://localhost:8080/
