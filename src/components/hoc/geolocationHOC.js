@@ -46,6 +46,9 @@ const GeoLocationHOC = options => WrappedComponent => {
       return <WrappedComponent geoLocation={location} {...this.props} />;
     }
   };
+  GeoLocationHOC.displayName = `GeoLocationHOC(${getDisplayName(
+    WrappedComponent
+  )})`;
 };
 
 export default GeoLocationHOC;
