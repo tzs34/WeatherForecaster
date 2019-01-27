@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const FormContainer = styled.div`
   background-color: white;
-  width: 600px;
+  width: 550px;
   height: 20vh;
-  padding: 10px 20px;
+  padding: 10px 60px;
   margin: 0 auto;
 `;
 const Form = styled.form`
@@ -50,13 +50,13 @@ const UserForm = ({ getWeather }) => (
     <Form onSubmit={getWeather}>
       <div>
         <FormLabel for="city">City Name</FormLabel>
-        <FormInput id-="city" type="text" name="city" width={60} />
+        <FormInput id-="city" type="text" name="city" width={70} />
       </div>
       <div>
         <FormLabel for="country">Country Code (e.g 'US', 'GB')</FormLabel>
-        <FormInput id-="country" type="text" name="country" width={30} />
+        <FormInput id-="country" type="text" name="country" width={38} />
       </div>
-      <Button>Get Weather Forecast</Button>
+      <Button>Get Forecast</Button>
     </Form>
   </FormContainer>
 );
