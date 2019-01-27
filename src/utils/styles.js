@@ -17,21 +17,8 @@ const fadeIn = keyframes`
   }
 `;
 
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-`;
-
 const FadeIn = styled.div`
   animation: ${fadeIn} 0.5s linear;
 `;
-const FadeOut = styled.div`
-  animation: ${fadeOut} 0.5s linear;
-`;
 
-export { FlexRow, FadeIn, FadeOut };
+export { FlexRow, FadeIn };

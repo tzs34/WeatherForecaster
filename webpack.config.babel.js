@@ -28,6 +28,18 @@ module.exports = {
       {
         test: /\.svg$/,
         loader: "svg-inline-loader"
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)$/,
+        loader: "file-loader",
+        options: {
+          limit: 10000,
+          name: "[name].[hash:7].[ext]"
+        }
       }
     ]
   },
