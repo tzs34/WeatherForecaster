@@ -19,4 +19,4 @@
 1. run yarn test
 
 #### Notes on testing:
-For testing jest and react-testing-library are used. Only minimum testing is provided because of time contstraints. My preferred approach is to abstract as much logic from the views as possible to make the code cleaner and more maintainable. My prefered approach is to  take a functional programming approach to compose functionality from small functions to make testing straightforward and write unIT tests for those. I then use eact-testing-library to test the React components.
+For testing jest and react-testing-library are used. Only minimum testing is provided because of time contstraints. My preferred approach is to abstract as much logic from the views as possible to make the code cleaner and more maintainable. My prefered approach is to  take a functional programming approach to compose functionality from small functions to make testing straightforward and write unit tests for those. I then use eact-testing-library to test the React components.
