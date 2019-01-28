@@ -1,5 +1,3 @@
-const KELVIN_CONST = 273.15;
-
 const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)));
 
 const curry = fn => {
@@ -82,6 +80,16 @@ const getGroupedProps = curry((prop, obj) => {
   return Object.values(obj[prop]);
 });
 
+const formatWeatherData = arr => {
+  return arr.map(o => {
+    let obj = {};
+    obj.day = getDayFromWeatherObj(o);
+    obj.temp = Math.floor(o.main.temp);
+    obj.icon = o.weather[0].id;
+    return obj;
+  });
+};
+
 const getWeatherData = data => {
   const getWeatherNearestCurrentTime = getPropNearestCurrentTime(
     "dt_txt",
@@ -94,16 +102,18 @@ const getWeatherData = data => {
   )(data);
 };
 
-const formatWeatherData = arr => {
-  return arr.map(o => {
-    let obj = {};
-    obj.day = getDayFromWeatherObj(o);
-    obj.temp = Math.floor(o.main.temp);
-    obj.icon = o.weather[0].id;
-    return obj;
-  });
-};
-
 module.exports = {
+  compose,
+  curry,
+  getValueOfProp,
+  addSymbol,
+  parseWeatherDay,
+  getWeatherDateString,
+  getDatefromWeatherObj,
+  groupByProp,
+  groupWeatherByDate,
+  getPropNearestCurrentTime,
+  getGroupedProps,
+  formatWeatherData,
   getWeatherData
 };
