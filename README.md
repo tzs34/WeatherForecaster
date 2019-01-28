@@ -21,4 +21,4 @@
 #### Notes on testing:
 For testing jest and react-testing-library are used. Only minimum testing is provided because of time contstraints. My preferred approach is to abstract as much logic from the views as possible to make the code cleaner and more maintainable. My prefered approach is to  take a functional programming approach to compose functionality from small functions to make testing straightforward and write unit tests for those. I then use eact-testing-library to test the React components. Going forward the tests would be expanded and incrporate other testing tools e.g. (Cypress (https://www.cypress.io/) ) for more comprehensive testing.
 
-## Unfortunately I used react-icons-weather and my tests broke . I didn't have time to resolve this.
+#### Unfortunately I used react-icons-weather and my tests broke . I didn't have time to resolve this. If I had more time I'd try another icon library or go for a pure css approach. 
